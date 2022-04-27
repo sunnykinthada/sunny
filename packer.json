@@ -1,13 +1,13 @@
 {
     "_comment" : "Create a AWS AMI ith AMZ Linux 2018 with Java and Tomcat",
     "variables": {
-      "aws_access_key": "",
-      "aws_secret_key": "",
-      "region": "",
-      "source_ami":"",
-      "instance_type":"",
-      "vpc_id": "",
-      "subnet_id": ""
+      "aws_access_key": "AKIAWGX6CPMXR66N4NNQ",
+      "aws_secret_key": "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",
+      "region": "us-east-1",
+      "source_ami":"ami-0f9fc25dd2506cf6d",
+      "instance_type":"t2.micro",
+      "vpc_id": "vpc-0bc57b9f4e778ad83",
+      "subnet_id": "subnet-0de97f53813b4ae04"
     },
     "_comment1" : "packer build -var \"aws_secret_key=foo\" template.json",
     "_comment2" : "packer build -var-file packer-vars.json template.json",
