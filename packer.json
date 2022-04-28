@@ -1,17 +1,14 @@
 {
-    "_comment" : "Create a AWS AMI ith AMZ Linux 2018 with Java and Tomcat",
-    "variables": {
-      "aws_access_key": "AKIAWGX6CPMXR66N4NNQ",
-      "aws_secret_key": "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",
-      "region": "us-east-1",
-      "source_ami":"ami-04505e74c0741db8d",
-      "instance_type":"t2.micro",
-      "vpc_id": "vpc-0bc57b9f4e778ad83",
-      "subnet_id": "subnet-0de97f53813b4ae04"
-    },
-    "_comment1" : "packer build -var \"aws_secret_key=foo\" template.json",
-    "_comment2" : "packer build -var-file packer-vars.json template.json",
-    "builders": [{
+  "_comment": "Create a AWS AMI ith AMZ Linux 2018 with Java and Tomcat",
+  "variables": {
+    "aws_access_key": "AKIAWGX6CPMXQCTFVYVT",
+    "aws_secret_key": "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",
+    "region": "us-east-1",
+    "source_ami": "ami-04505e74c0741db8d",
+    "instance_type": "t2.micro"
+  },
+  "builders": [
+    {
       "access_key": "{{user `aws_access_key`}}",
       "secret_key": "{{user `aws_secret_key`}}",
       "type": "amazon-ebs",
@@ -19,44 +16,17 @@
       "source_ami": "{{user `source_ami`}}",
       "instance_type": "{{user `instance_type`}}",
       "ssh_username": "ubuntu",
-      "ami_name": "DevOpsClass-B18-Build-{{isotime | clean_resource_name}}",
-      "vpc_id": "{{user `vpc_id`}}",
-      "subnet_id": "{{user `subnet_id`}}",
+      "ami_name": "sunny-{{isotime | clean_resource_name}}",
       "tags": {
-        "Name": "DevOpsClass-B18-Build-{{isotime | clean_resource_name}}"
+        "Name": "sunny-{{isotime | clean_resource_name}}"
       }
-    }],
-    "provisioners": [{
-      "type": "shell",
-      "inline": [
-        "sleep 30",
-        "sudo apt update -y",
-        "sudo apt install nginx -y",
-        "sudo apt install git -y",
-        "sudo git clone https://github.com/mavrick202/webhooktesting.git",
-        "sudo rm -rf /var/www/html/index.nginx-debian.html",
-        "sudo cp webhooktesting/index.html /var/www/html/index.nginx-debian.html",
-        "sudo cp webhooktesting/style.css /var/www/html/style.css",
-        "sudo cp webhooktesting/scorekeeper.js /var/www/html/scorekeeper.js",
-        "sudo service nginx start",
-        "sudo systemctl enable nginx",
-        "curl https://get.docker.com | bash"
-        ]
-    },
-    {
-            "type": "file",
-            "source": "docker.service",
-            "destination": "/tmp/docker.service"
-    },
-    {
-        "type": "shell",
-        "inline": [
-            "sudo cp /tmp/docker.service /lib/systemd/system/docker.service",
-            "sudo usermod -a -G docker ubuntu",
-            "sudo systemctl daemon-reload",
-            "sudo service docker restart"
-        ]
-
     }
-]
-  }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": ["sleep 30", "sudo apt update -y", "sudo apt install nginx -y"]
+    }
+  ]
+}
+
