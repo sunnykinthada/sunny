@@ -4,7 +4,7 @@ pwd
 echo "Running the packer script now..!!"
 echo .
 echo .
-packer build packer.json
+packer build packer.json bdjjkfg
 echo .
 echo .
 terraform init
