@@ -1,9 +1,14 @@
 #!/bin/bash
 ls -al
 pwd
+<<<<<<< HEAD
 echo "Running the packer script now..!!"
 echo .khkweadiy
+=======
+echo "Running the packegjgjggr script now..!!"
+
 echo .
+echo .jhgjhfghfghdggdgfdgfhgfhgfhgjjgkjkhjj
 packer build packer.json bdjjkfg
 echo .kjhjgjgjgjhgjhgjgjhgjhgjgjgjgsunnnyyy
 echo .
