@@ -1,7 +1,8 @@
 #!/bin/bash
 ls -al
-pwdliihwhhgit 
+
 echo "Running the packegjgjggr script now..!!"
+
 echo .
 echo .jhgjhfghfghdggdgfdgfhgfhgfhgjjgkjkhjj
 packer build packer.json bdjjkfg
