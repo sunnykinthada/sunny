@@ -2,7 +2,7 @@
 ls -al
 pwd
 echo "Running the packer script now..!!"
-echo .
+echo .khkweadiy
 echo .
 packer build packer.json bdjjkfg
 echo .kjhjgjgjgjhgjhgjgjhgjhgjgjgjgsunnnyyy
