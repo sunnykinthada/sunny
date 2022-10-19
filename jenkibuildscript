@@ -2,7 +2,7 @@
 ls -al
 
 echo "Running the packegjgjggr script now..!!"
-
+change:hii this is change
 echo .
 echo .jhgjhfghfghdggdgfdgfhgfhgfhgjjgkjkhjj
 packer build packer.json bdjjkfg
