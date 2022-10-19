@@ -1,5 +1,6 @@
 #!/bin/bash
 ls -al
+<<<<<<< HEAD
 
 echo "Running the packegjgjggr script now..!!"
 change:hii this is change
