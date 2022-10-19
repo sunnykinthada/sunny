@@ -4,7 +4,7 @@ ls -al
 echo "Running the packegjgjggr script now..!!"
 change:hii this is change
 echo .
-echo .jhgjhfghfghdggdgfdgfhgfhgfhgjjgkjkhjj
+echo .jhgjhfghfghdggdgfdgfhgfhgfhgjjgkjkhjj"sai"
 packer build packer.json bdjjkfg
 
 echo .kjhjgjgjgjhgjhgjgjhgjhgjgjgjgsunnnyyy
