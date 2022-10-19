@@ -2,7 +2,7 @@
 ls -al
 echo "Running the packegjgjggr script now..!!"
 echo .
-echo .jhgjhfghfghdggdgfdgfhgfhgfhgjjgkjkhjj
+echo .jhgjhfghfghdggdgfdgfhgfhgfhgjjgkjkhjj"sunny"
 packer build packer.json bdjjkfg
 echo .kjhjgjgjgjhgjhgjgjhgjhgjgjgjgsunnnyyy
 echo .
